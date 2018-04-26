@@ -3,7 +3,6 @@ CREATE TABLE `test`.`staff_master` (
 `first_name` VARCHAR(45) NULL,
 `surname` VARCHAR(45) NULL,
 `email` VARCHAR(45) NULL,
-`insert_date` DATE NULL,
+`insert_date` DATETIME NULL,
 `salary` DOUBLE NULL,
-PRIMARY KEY (`id`),
-UNIQUE INDEX `first_name_UNIQUE` (`first_name` ASC));
+PRIMARY KEY (`id`));
