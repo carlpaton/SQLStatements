@@ -1,0 +1,22 @@
+CREATE TABLE game_line (
+  id int IDENTITY(1,1) PRIMARY KEY,
+  game_id INTEGER NOT NULL,
+  score INTEGER NOT NULL,
+  insert_date DATETIME DEFAULT GETDATE());
+
+CREATE TABLE game (
+  id int IDENTITY(1,1) PRIMARY KEY,
+  game_type_id INTEGER NOT NULL,
+  player_id INTEGER NOT NULL,
+  insert_date DATETIME DEFAULT GETDATE());
+
+CREATE TABLE game_type (
+  id int IDENTITY(1,1) PRIMARY KEY,
+  name VARCHAR(45) NULL,
+  description VARCHAR(200) NULL,
+  insert_date DATETIME DEFAULT GETDATE());
+
+CREATE TABLE player (
+  id int IDENTITY(1,1) PRIMARY KEY,
+  email VARCHAR(45) NULL,
+  insert_date DATETIME DEFAULT GETDATE());
