@@ -1,1 +1,1 @@
-CREATE DATABASE dunkme;
+/*CREATE DATABASE dunkme;*
