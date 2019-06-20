@@ -8,7 +8,7 @@ Instantiated in tempdb
 ​    `c2 Varchar(50),` 
 `);`
 
-* [See temporary tables.sql](temporary tables.sql)
+* [table variables.sql](table variables.sql)
 
 ## Table Variables
 
@@ -20,7 +20,7 @@ Instantiated in tempdb
 ​    `c2 Varchar(50)` 
 `);`
 
-* [See table variables.sql](table variables.sql)
+* [temporary tables.sql](temporary tables.sql)
 
 ## References
 
