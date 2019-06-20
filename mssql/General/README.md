@@ -8,7 +8,7 @@ Instantiated in tempdb
 ​    `c2 Varchar(50),` 
 `);`
 
-* [table variables.sql](table variables.sql)
+* [table variables.sql](<https://github.com/carlpaton/SQLStatements/blob/master/mssql/General/table%20variables.sql>)
 
 ## Table Variables
 
@@ -20,7 +20,7 @@ Instantiated in tempdb
 ​    `c2 Varchar(50)` 
 `);`
 
-* [temporary tables.sql](temporary tables.sql)
+* [temporary tables.sql](<https://github.com/carlpaton/SQLStatements/blob/master/mssql/General/temporary%20tables.sql>)
 
 ## References
 
