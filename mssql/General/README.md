@@ -1,3 +1,7 @@
+### Stored Proc
+
+* [stored-proc-with-cursor-loop](stored-proc-with-cursor-loop.md)
+
 ### Temporary Tables
 
 Instantiated in tempdb
