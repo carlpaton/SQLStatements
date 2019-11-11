@@ -43,3 +43,7 @@ OFFSET ((@page - 1) * @rows) ROWS
 FETCH NEXT @rows ROWS ONLY;
 ```
 
+References
+
+* https://sqlperformance.com/2015/01/t-sql-queries/pagination-with-offset-fetch
+* https://www.essentialsql.com/using-offset-and-fetch-with-the-order-by-clause/
