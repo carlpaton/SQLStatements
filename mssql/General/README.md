@@ -40,12 +40,16 @@ SELECT DATEADD(hh, 24 * 1 + 11, DATEADD(dd, DATEDIFF(dd, 0, GETDATE()), 0))
 SELECT DATEADD(minute, 2115, DATEADD(dd, DATEDIFF(dd, 0, GETDATE()), 0))
 ```
 
+### Order by random
 
+Select a random record from a large table
+
+```
+SELECT TOP 1 *
+FROM dbo.carl_table (NOLOCK)
+ORDER BY NEWID()
+```
 
 ### References
 
 * <https://www.mssqltips.com/sqlservertip/1556/differences-between-sql-server-temporary-tables-and-table-variables/>
-
-```
-
-```
