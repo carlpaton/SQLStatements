@@ -22,15 +22,14 @@ DROP PROCEDURE IF EXISTS dbo.sp_insert_component
 GO
 CREATE PROCEDURE sp_insert_component
     (
-        @name varchar(500) = NULL ,
-        @type_format varchar(500) = NULL 
+        @name varchar(500) = NULL 
     )
     AS
     BEGIN
         INSERT INTO component
-        (name,type_format)
+        (name)
         VALUES
-        (@name,@type_format);
+        (@name);
         SELECT SCOPE_IDENTITY();
     END
 GO
@@ -41,14 +40,12 @@ GO
 CREATE PROCEDURE sp_update_component
     (
         @id int = NULL ,
-        @name varchar(500) = NULL ,
-        @type_format varchar(500) = NULL 
+        @name varchar(500) = NULL 
     )
     AS
     BEGIN
         UPDATE component SET
-        name = @name,
-        type_format = @type_format
+        name = @name
         WHERE id=@id;
     END
 GO
