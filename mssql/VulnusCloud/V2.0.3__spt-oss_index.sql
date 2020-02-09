@@ -81,3 +81,16 @@ CREATE PROCEDURE sp_delete_oss_index(@id INT)
         WHERE id=@id;
     END
 GO
+
+
+DROP PROCEDURE IF EXISTS dbo.sp_select_by_component_id
+GO
+CREATE PROCEDURE sp_select_by_component_id 
+	(
+		@Id int
+	)
+    AS
+    BEGIN
+        SELECT * FROM oss_index WHERE component_id = @Id
+    END
+GO

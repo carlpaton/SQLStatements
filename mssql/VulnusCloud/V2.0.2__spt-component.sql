@@ -60,3 +60,16 @@ CREATE PROCEDURE sp_delete_component(@id INT)
         WHERE id=@id;
     END
 GO
+
+
+DROP PROCEDURE IF EXISTS dbo.sp_select_by_name_component
+GO
+CREATE PROCEDURE sp_select_by_name_component 
+	(
+		@Name varchar(500)
+	)
+    AS
+    BEGIN
+        SELECT * FROM component WHERE name = @Name
+    END
+GO

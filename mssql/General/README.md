@@ -50,6 +50,14 @@ FROM dbo.carl_table (NOLOCK)
 ORDER BY NEWID()
 ```
 
+### WAITFOR DELAY
+
+10 seconds
+
+```
+WAITFOR DELAY '00:00:10';
+```
+
 ### References
 
 * <https://www.mssqltips.com/sqlservertip/1556/differences-between-sql-server-temporary-tables-and-table-variables/>
