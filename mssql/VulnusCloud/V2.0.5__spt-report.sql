@@ -63,3 +63,13 @@ CREATE PROCEDURE sp_delete_report(@id INT)
         WHERE id=@id;
     END
 GO
+
+
+DROP PROCEDURE IF EXISTS dbo.sp_selectlist_report_by_project_id
+GO
+CREATE PROCEDURE sp_selectlist_report_by_project_id @Id int
+    AS
+    BEGIN
+        SELECT * FROM report WHERE project_id = @Id
+    END
+GO
