@@ -84,3 +84,13 @@ CREATE PROCEDURE sp_delete_oss_index_vulnerabilities(@id INT)
         WHERE id=@id;
     END
 GO
+
+
+DROP PROCEDURE IF EXISTS dbo.sp_selectlist_oss_index_vulnerabilities_by_oss_index_id
+GO
+CREATE PROCEDURE sp_selectlist_oss_index_vulnerabilities_by_oss_index_id @Id int
+    AS
+    BEGIN
+        SELECT * FROM oss_index_vulnerabilities WHERE oss_index_id = @Id
+    END
+GO
