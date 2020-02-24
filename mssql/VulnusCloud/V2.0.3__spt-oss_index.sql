@@ -94,3 +94,19 @@ CREATE PROCEDURE sp_select_by_component_id
         SELECT * FROM oss_index WHERE component_id = @Id
     END
 GO
+
+
+DROP PROCEDURE IF EXISTS dbo.sp_select_by_http_status
+GO
+CREATE PROCEDURE sp_select_by_http_status 
+	(
+		@HttpStatus int
+	)
+    AS
+    BEGIN
+        SELECT TOP 10 * 
+		FROM oss_index 
+		WHERE http_status = @HttpStatus 
+		ORDER BY id DESC
+    END
+GO
