@@ -10,6 +10,7 @@ CREATE TABLE [dbo].[oss_index](
 	[description] [varchar](500) NULL,
 	[reference] [varchar](200) NULL,
 	[expire_date] [DATETIME],
-	[http_status] [int] NOT NULL
+	[http_status] [int] NOT NULL,
+	[http_status_date] [DATETIME]
 ) ON [PRIMARY]
 GO

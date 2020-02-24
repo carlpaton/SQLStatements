@@ -29,14 +29,15 @@ CREATE PROCEDURE sp_insert_oss_index
         @description varchar(500) = NULL ,
         @reference varchar(500) = NULL ,
         @expire_date datetime = NULL ,
-        @http_status int = NULL 
+        @http_status int = NULL ,
+		@http_status_date datetime = NULL
     )
     AS
     BEGIN
         INSERT INTO oss_index
-        (component_id,version,type_format,coordinates,description,reference,expire_date,http_status)
+        (component_id,version,type_format,coordinates,description,reference,expire_date,http_status, http_status_date)
         VALUES
-        (@component_id,@version,@type_format,@coordinates,@description,@reference,@expire_date,@http_status);
+        (@component_id,@version,@type_format,@coordinates,@description,@reference,@expire_date,@http_status, @http_status_date);
         SELECT SCOPE_IDENTITY();
     END
 GO
@@ -54,7 +55,8 @@ CREATE PROCEDURE sp_update_oss_index
         @description varchar(500) = NULL ,
         @reference varchar(500) = NULL ,
         @expire_date datetime = NULL ,
-        @http_status int = NULL 
+        @http_status int = NULL ,
+		@http_status_date datetime = NULL
     )
     AS
     BEGIN
@@ -66,7 +68,8 @@ CREATE PROCEDURE sp_update_oss_index
         description = @description,
         reference = @reference,
         expire_date = @expire_date,
-        http_status = @http_status
+        http_status = @http_status,
+		http_status_date = @http_status_date
         WHERE id=@id;
     END
 GO
