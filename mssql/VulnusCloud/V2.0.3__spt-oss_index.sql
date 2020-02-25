@@ -3,7 +3,7 @@ GO
 CREATE PROCEDURE sp_select_oss_index @Id int
     AS
     BEGIN
-        SELECT * FROM oss_index WHERE id = @Id
+        SELECT * FROM oss_index (NOLOCK) WHERE id = @Id
     END
 GO
 
@@ -13,7 +13,7 @@ GO
 CREATE PROCEDURE sp_selectlist_oss_index
     AS
     BEGIN
-        SELECT * FROM oss_index
+        SELECT * FROM oss_index (NOLOCK)
     END
 GO
 
@@ -94,7 +94,7 @@ CREATE PROCEDURE sp_select_by_component_id
 	)
     AS
     BEGIN
-        SELECT * FROM oss_index WHERE component_id = @Id
+        SELECT * FROM oss_index (NOLOCK) WHERE component_id = @Id
     END
 GO
 
