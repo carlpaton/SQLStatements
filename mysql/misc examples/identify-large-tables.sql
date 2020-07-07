@@ -1,5 +1,5 @@
-SELECT CONCAT(table_schema, '.', table_name),
- CONCAT(table_rows) rows,
+SELECT CONCAT(table_schema, '.', table_name) as schemass,
+ CONCAT(table_rows) rowss,
  CONCAT(ROUND(data_length / ( 1024 * 1024 * 1024 ), 2), 'G') DATA,
  CONCAT(ROUND(index_length / ( 1024 * 1024 * 1024 ), 2), 'G') idx,
  CONCAT(ROUND(( data_length + index_length ) / ( 1024 * 1024 * 1024 ), 2), 'G') total_size,
